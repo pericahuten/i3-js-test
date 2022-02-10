@@ -91,13 +91,11 @@ function provjera(x)
         boja = document.getElementById('pitanje' + (x+1))
         boja.style.backgroundColor = "#6dbcd6"; 
         boja.classList.add('aktivan');
-        tempAlert(brojac, 2000);
     } else
     {
         boja = document.getElementById('pitanje' + (x+1))
         boja.style.backgroundColor = "#f1f1f1";
         boja.classList.remove('aktivan');
-        tempAlert(brojac, 2000);
     }
 
     if(x == 0 && provjereno > 3)
@@ -139,3 +137,4 @@ function tempAlert(msg,duration)
     
 
     
+
