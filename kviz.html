@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stil.css">
+    <title>Kviz Perica Huten</title>
+</head>
+<body onload="generirajPitanje()">
+        <div class="traka">
+            <button id="pitanje1" class="trakapitanja" onclick="otvoriPitanje(event, 'p1')"> pitanje 1</button>
+            <button id="pitanje2" class="trakapitanja" onclick="otvoriPitanje(event, 'p2')"> pitanje 2</button>
+            <button id="pitanje3" class="trakapitanja" onclick="otvoriPitanje(event, 'p3')"> pitanje 3</button>
+            <button id="pitanje4" class="trakapitanja" onclick="otvoriPitanje(event, 'p4')"> pitanje 4</button>
+        </div>
+
+        <div id="p1" class="pitanjeSadrzaj">
+            <h3>Pitanje 1</h3>
+            <a onclick="otvoriPitanje(event, 'p2')" class="next">&#10095;</a>
+            <div id="grupaPitanja1" class="grid"></div>
+        </div>
+        <div id="p2" class="pitanjeSadrzaj">
+            <h3>Pitanje 2</h3>
+            <a onclick="otvoriPitanje(event, 'p1')" class="prev">&#10094;</a>
+            <a onclick="otvoriPitanje(event, 'p3')" class="next">&#10095;</a>
+            <div id="grupaPitanja2" class="grid"></div>
+        </div>
+        <div id="p3" class="pitanjeSadrzaj">
+            <h3>Pitanje 3</h3>
+            <a onclick="otvoriPitanje(event, 'p2')" class="prev">&#10094;</a>
+            <a onclick="otvoriPitanje(event, 'p4')" class="next">&#10095;</a>
+            <div id="grupaPitanja3" class="grid"></div>
+        </div>
+        <div id="p4" class="pitanjeSadrzaj">
+            <h3>Pitanje 4</h3>
+            <a onclick="otvoriPitanje(event, 'p3')" class="prev">&#10094;</a>
+            <button onclick="rezultati()" class="result" style="display:none">Show Result</button>
+            <div id="grupaPitanja4" class="grid"></div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
